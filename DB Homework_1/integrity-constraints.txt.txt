@@ -1,0 +1,17 @@
+Types of integrity constraints[edit]
+Data integrity is normally enforced in a database system by a series of integrity constraints or rules. Three types of integrity constraints are an inherent part of the relational data model: entity integrity, referential integrity and domain integrity:
+
+Entity integrity concerns the concept of a primary key. Entity integrity is an integrity rule which states that every table must have a primary key and that the column or columns chosen to be the primary key should be unique and not null.
+Referential integrity concerns the concept of a foreign key. The referential integrity rule states that any foreign-key value can only be in one of two states. The usual state of affairs is that the foreign-key value refers to a primary key value of some table in the database. Occasionally, and this will depend on the rules of the data owner, a foreign-key value can be null. In this case we are explicitly saying that either there is no relationship between the objects represented in the database or that this relationship is unknown.
+Domain integrity specifies that all columns in a relational database must be declared upon a defined domain. The primary unit of data in the relational data model is the data item. Such data items are said to be non-decomposable or atomic. A domain is a set of values of the same type. Domains are therefore pools of values from which actual values appearing in the columns of a table are drawn.
+User-defined integrity refers to a set of rules specified by a user, which do not belong to the entity, domain and referential integrity categories.
+If a database supports these features it is the responsibility of the database to insure data integrity as well as the consistency model for the data storage and retrieval. If a database does not support these features it is the responsibility of the applications to ensure data integrity while the database supports the consistency model for the data storage and retrieval.
+
+Having a single, well-controlled, and well-defined data-integrity system increases
+
+stability (one centralized system performs all data integrity operations)
+performance (all data integrity operations are performed in the same tier as the consistency model)
+re-usability (all applications benefit from a single centralized data integrity system)
+maintainability (one centralized system for all data integrity administration).
+As of 2012, since all modern databases support these features (see Comparison of relational database management systems), it has become the de facto responsibility of the database to ensure data integrity. Out-dated and legacy systems that use file systems (text, spreadsheets, ISAM, flat files, etc.) for their consistency model lack any[citation needed] kind of data-integrity model. This requires organizations to invest a large amount of time, money and personnel in building data-integrity systems on a per-application basis that needlessly duplicate the existing data integrity systems found in modern databases. Many companies, and indeed many database systems themselves, offer products and services to migrate out-dated and legacy systems to modern databases to provide these data-integrity features. This offers organizations substantial savings in time, money and resources because they do not have to develop per-application data-integrity systems that must be refactored each time the business requirements change.
+

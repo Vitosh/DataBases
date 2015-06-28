@@ -1,0 +1,9 @@
+Hierarchical database model
+Network model
+Relational model
+Entity–relationship model
+Enhanced entity–relationship model
+Object model
+Document model
+Entity–attribute–value model
+Star schema

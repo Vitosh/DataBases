@@ -1,0 +1,12 @@
+What is SQL? 
+SQL (pronounced "ess-que-el") stands for Structured Query Language. SQL is used to communicate with a database.
+
+What is DML? 
+A data manipulation language (DML) is a family of syntax elements similar to a computer programming language used for selecting, inserting, deleting and updating data in a database.
+
+What is DDL? 
+A data definition language or data description language (DDL) is a syntax similar to a computer programming language for defining data structures, especially database schemas.
+
+Recite the most important SQL commands.
+The 4 CRUD commands:
+INSERT, SELECT, UPDATE, DELETE

@@ -1,0 +1,4 @@
+The benefits of DB normalizations are that we have more DBs, thus if some value has to be changed, we change it only once. 
+
+More:
+https://en.wikipedia.org/wiki/Database_normalization
