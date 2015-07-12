@@ -1,0 +1,49 @@
+--create database
+CREATE DATABASE PerformanceSQL
+GO
+
+USE PerformanceSQL
+
+CREATE TABLE SomeTable
+(
+--ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+SomeText NVARCHAR(60) NOT NULL,
+SomeDate Date NOT NULL,
+SomeInteger INT NOT NULL
+)
+GO
+
+USE PerformanceSQL
+
+--fill database with random data
+--10 million was too much, even with 100K needed more than a minute,
+--because of the calculations for the random
+
+DECLARE @I int =1
+WHILE @I < 10000000  BEGIN
+	SET @I = @I+ 1
+	INSERT INTO SomeTable(SomeText, SomeDate, SomeInteger)
+	VALUES(		
+		SUBSTRING(CONVERT(varchar(60), NEWID()),0,2),
+		DATEADD(day, (ABS(CHECKSUM(NEWID())) % 65530), 0),
+		CAST(RAND() * 4 AS INT))	
+END 
+GO
+
+--search
+USE PerformanceSQL
+SELECT  SomeText, SomeDate FROM SomeTable
+WHERE SomeDate >='1980-01-01'
+AND SomeDate <= '1999-01-01'
+
+--clean cache
+DBCC FREEPROCCACHE WITH NO_INFOMSGS;
+
+
+USE PerformanceSQL
+SELECT  SomeText, SomeDate FROM SomeTable
+WHERE SomeDate >='1980-01-01'
+AND SomeDate <= '1999-01-01'
+
+
+

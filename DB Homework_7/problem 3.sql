@@ -1,0 +1,8 @@
+USE performance;
+CREATE TABLE Some_Table (
+ID INT NOT NULL AUTO_INCREMENT,
+SomeText NVARCHAR(100) NOT NULL,
+SomeDate Date NOT NULL,
+SomeInteger INT NOT NULL,
+PRIMARY KEY ( ID )
+);
